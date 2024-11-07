@@ -1,4 +1,4 @@
-import { ChevronUp, Database, User2 } from "lucide-react";
+import { ChevronUp, Database, Heart, User2, Zap } from "lucide-react";
 
 import {
   Sidebar,
@@ -97,29 +97,17 @@ export function MainSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <SidebarMenuButton>
-                  <User2 /> Username
-                  <ChevronUp className="ml-auto" />
-                </SidebarMenuButton>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                side="right"
-                className="w-[--radix-popper-anchor-width]"
-              >
-                <DropdownMenuItem>
-                  <span>Account</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <span>Billing</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <span>Sign out</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Button className="w-full inline-flex bg-secondaryColor text-black">
+              Sponser the Developer{" "}
+              <Heart className="w-4 right-4 bottom-1/2 translate-y-1/2 absolute fill-red-500" />
+            </Button>
           </SidebarMenuItem>
+          {/* <SidebarMenuItem>
+            <Button className="w-full inline-flex">
+              Generate Schema{" "}
+              <Zap className="w-4 right-4 bottom-1/2 translate-y-1/2 absolute" />
+            </Button>
+          </SidebarMenuItem> */}
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>

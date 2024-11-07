@@ -10,7 +10,7 @@ const Button = (props: ButtonProps) => {
   return (
     <button
       className={cn(
-        "shadow-sm bg-mainColor hover:bg-mainHoverColor transition-all hover:shadow-md text-white p-2 px-4 rounded-md text-sm",
+        "relative shadow-sm bg-mainColor hover:bg-mainHoverColor whitespace-nowrap transition-all hover:shadow-md text-white p-2 px-4 rounded-md text-sm",
         className
       )}
     >
