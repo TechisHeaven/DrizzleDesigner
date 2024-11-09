@@ -8,10 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <SidebarProvider defaultOpen={true} key={"app-sidebar"}>
       <AppSidebar />
       <MainSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
+      <main className="w-full h-full">{children}</main>
     </SidebarProvider>
   );
 }

@@ -11,12 +11,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
 import Button from "./button";
 import {
   Select,
@@ -27,17 +21,18 @@ import {
 } from "./ui/select";
 import { TooltipCustom } from "./customTooltip";
 import Link from "next/link";
+import MainSidebarHeader from "./main-sidebar-header";
 
 // Menu items.
 const items = [
   {
     title: "Littlemove",
-    url: "#",
+    url: "schema/littlemove",
     icon: Database,
   },
   {
     title: "Drizzle Designer",
-    url: "#",
+    url: "schema/Drizzle Designer",
     icon: Database,
   },
 ];
@@ -53,22 +48,7 @@ export function MainSidebar() {
     >
       <SidebarContent>
         <SidebarGroup>
-          <div className="inline-flex items-center justify-between p-2">
-            <h1 className="font-semibold">All Tables</h1>
-            <Button>New Table</Button>
-          </div>
-          <div className="provider">
-            <SidebarGroupLabel>Provider</SidebarGroupLabel>
-            <Select defaultValue="PostgreSQL">
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Provider" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="PostgreSQL">PostgreSQL</SelectItem>
-                <SelectItem value="MySQL">MySQL</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
+          <MainSidebarHeader />
           <div className="tables">
             <SidebarGroupLabel>Tables</SidebarGroupLabel>
           </div>
